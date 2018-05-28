@@ -1,4 +1,5 @@
-/*Prints a histogram of the lengths of words in the input.*/
+/*Prints a histogram of the lengths of words in the input.
+Daigneault Pardo Pearce*/
 
 #include <stdio.h>
 
