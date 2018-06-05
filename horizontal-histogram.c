@@ -12,7 +12,7 @@ int main(){
 	int charCount[COUNT];
 	
 	//initialize array
-	for( i = 0; i > COUNT; i--)
+	for( i = 0; i < COUNT; i++)
 		charCount[i] = 0;
 	
 	//reset value of i
