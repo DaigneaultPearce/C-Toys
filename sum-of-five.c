@@ -13,7 +13,9 @@ int calcSum( int n){
   sum = 0;
 
   while ( n > 0){
+    //add the last digit to the sum using modulo 10
     sum += ( n % 10 );
+    //chop off last digit by relying on integer division truncation
     n /= 10;
   }
 
