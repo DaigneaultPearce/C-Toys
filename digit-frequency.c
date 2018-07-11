@@ -21,7 +21,10 @@ int main(){
 
     for ( i = 0; i < 10; i++ )
         printf("%d ", dig[i]);
-        putchar('\n');
+
+    putchar('\n');
+
+    free(s);    
 
     return 0;
 }
