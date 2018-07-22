@@ -1,7 +1,14 @@
+/*Daigneault Pardo Pearce
+This is the solution to hacker rank problem
+Permutation of strings which asks for the lexicographic ordering
+of strings.
+From my research I found an algo created by a woman by the name of
+Narayana Pandita which I implemented in C*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//my code
 int next_permutation(int n, char **s)
 {
     int hasNext, k, l, i;
@@ -11,7 +18,6 @@ int next_permutation(int n, char **s)
     for(i = n - 1; i > 0; i--){
         if( s[i - 1] < s[i]){
             k = i - 1;
-            printf("k = %d\n", k);
             hasNext = 1;
             break;
         }
@@ -19,19 +25,16 @@ int next_permutation(int n, char **s)
     //find l
     for(i = n - 1; i > k; i--){
         if( s[i] > s[k]){
-            printf("l = %d\n", l);
             l = i;
             break;
         }
     }
     //swap k and l
-    printf("swapping %s and %s\n", s[k], s[l]);
     tmp = s[k];
     s[k] = s[l];
     s[l] = tmp;
     //reverse from k+1 to n
     for( i = k + 1; i < n - 1; i++ ){
-        printf("reverse %s and %s\n", s[i], s[i + 1]);
         tmp = s[i];
         s[i] = s[i + 1];
         s[i + 1] = tmp;
@@ -43,6 +46,7 @@ int next_permutation(int n, char **s)
 	*/
     return hasNext;
 }
+//end of my code
 int main()
 {
 	char **s;
