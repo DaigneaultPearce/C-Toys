@@ -9,14 +9,16 @@ Narayana Pandita which I implemented in C*/
 #include <stdlib.h>
 #include <string.h>
 //my code
+
 int next_permutation(int n, char **s)
 {
     int hasNext, k, l, i;
     char *tmp;
-    hasNext = 0;
+    hasNext = l = 0;
     //find k
     for(i = n - 1; i > 0; i--){
-        if( s[i - 1] < s[i]){
+        if( *s[i - 1] < *s[i]){
+            printf("-%s %s-", s[i-1],s[i]);
             k = i - 1;
             hasNext = 1;
             break;
@@ -39,6 +41,7 @@ int next_permutation(int n, char **s)
         s[i] = s[i + 1];
         s[i + 1] = tmp;
     }
+
 	/**
 	* Complete this method
 	* Return 0 when there is no next permutation and 1 otherwise
