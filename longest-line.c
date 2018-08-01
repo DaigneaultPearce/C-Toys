@@ -19,7 +19,7 @@ int main()
   while( (len = getLine(line, MAXLINE) ) > 0)
   {
      /*modification to code begins here. Print the length of the line.
-     and as much as possible of the getnextaction*/
+     and as much as possible of the text*/
      if( len > 0 ){
         printf("length of current line including CR is %d\n", len - 1);
         printf("and reads: %s\n",line);
